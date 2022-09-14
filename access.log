@@ -1,0 +1,6 @@
+::ffff:127.0.0.1 - - [13/Sep/2022:07:12:04 +0000] "GET /about HTTP/1.1" 304 - "http://localhost:3000/contact" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [13/Sep/2022:07:12:04 +0000] "GET /layout/alert HTTP/1.1" 404 14 "http://localhost:3000/about" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [13/Sep/2022:07:12:07 +0000] "GET /contact HTTP/1.1" 304 - "http://localhost:3000/about" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [13/Sep/2022:07:12:08 +0000] "GET /layout/alert HTTP/1.1" 404 14 "http://localhost:3000/contact" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [13/Sep/2022:07:12:10 +0000] "GET /about HTTP/1.1" 304 - "http://localhost:3000/contact" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
+::1 - - [13/Sep/2022:07:12:11 +0000] "GET /layout/alert HTTP/1.1" 404 14 "http://localhost:3000/about" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"

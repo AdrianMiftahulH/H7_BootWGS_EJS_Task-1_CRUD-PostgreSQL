@@ -1,0 +1,55 @@
+<section class="container mt-3">
+    <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
+       
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div> -->
+    <center>
+        <h1>
+            <%= title %>
+        </h1>
+    </center>
+    <a href="/contact/add" class="btn btn-primary"><i class="bi bi-plus-square"></i> Tambah Kontak</a>
+
+    <% if (msg.length !==0) { %>
+        <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+            <%= msg %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <% } %>
+            <table class="table table-primary mt-3 table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Mobile</th>
+                        <th scope="col">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (cont.length < 1) { %>
+                        <h1>Contact data is empty</h1>
+                        <% }else{ %>    
+                            <% cont.forEach(contP=> { %>
+                                <tr class="table-light">
+                                    <td>
+                                        <%= contP.name %>
+                                    </td>
+                                    <td>
+                                        <%= contP.email %>
+                                    </td>
+                                    <td>
+                                        <%= contP.mobile %> 
+                                    </td>
+                                    <td>
+                                        <a href="/contact/edit/<%= contP.name %>"
+                                            class="btn btn-success"><i class="bi bi-pencil-square"></i> Edit</a>
+                                        <a href="/contact/delete/<%= contP.name %>" class="btn btn-danger"
+                                            onclick='return confirm("Data di Hapus?")'><i class="bi bi-x-square"></i>
+                                            Hapus</a>
+                                    </td>
+                                </tr>
+                                <% }); %>
+                                    <% } %>
+                </tbody>
+            </table>
+</section>

@@ -1,0 +1,30 @@
+<div class="title">
+    <h3>
+        <center>
+            <%= title %>
+        </center>
+    </h3>
+</div>
+<% if (typeof errors != 'undefined' ) { %>
+    <% errors.forEach(error=> { %>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <%= error.msg %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <% }) %>
+<% } %>
+<form action="/contact/add/saveContact" method="POST">
+    <div class="mb-3">
+        <label for="exampleInputNama1" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="exampleInputNama1" name="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"name="email" required>
+    </div>
+    <div class="mb-3">
+        <label for="MobileInput" class="form-label">Mobile</label>
+        <input type="text" class="form-control" id="MobileInput" name="mobile" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

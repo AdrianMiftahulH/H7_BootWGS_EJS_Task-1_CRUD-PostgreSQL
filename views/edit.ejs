@@ -1,0 +1,36 @@
+<div class="title">
+    <h3>
+        <center>
+            <%= title %>
+        </center>
+    </h3>
+</div>
+<% if (typeof errors !='undefined' ) { %>
+    <% errors.forEach(error=> { %>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <%= error.msg %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <% }) %>
+            <% } %>
+                <form method="POST" action="/contact/update"<%= contacts.oldnama || contacts.name %>"">
+                    <input type="hidden" class="form-control" name="oldnama" required
+                        value="<%= contacts.oldnama || contacts.name %>">
+                    <div class="mb-3">
+                        <label for="nama" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="name" name="name" required
+                            value="<%= contacts.name %>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required
+                            value="<%= contacts.email %>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="MobileInput" class="form-label">Mobile</label>
+                        <input type="text" class="form-control" id="MobileInput" name="mobile" required
+                            value="<%= contacts.mobile %>">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href="/contact" class="btn btn-secondary">Kembali</a>
+                </form>
